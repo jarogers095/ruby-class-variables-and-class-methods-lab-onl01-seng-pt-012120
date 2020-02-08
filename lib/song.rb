@@ -3,8 +3,9 @@ class Song
   @@artists = []
   @@genres = []
   
-  attr_reader(:count, :artists, :genres)
-  attr_accessor(:name, :artist, :genre)
+  attr_reader(:count, :artists, :genres, :name, :artist, :genre)
+  
+  
   
   def self.count
     return @@count
