@@ -14,7 +14,7 @@ class Song
     unique_artists = []
     @@artists.each do |an_artist|
       if !unique_artists.include?(an_artist)
-        unique_artists << artist
+        unique_artists << an_artist
       end
     end
     
