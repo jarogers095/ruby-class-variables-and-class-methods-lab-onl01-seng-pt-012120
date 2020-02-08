@@ -12,7 +12,10 @@ class Song
   
   def self.artists
     return @@artists.inject do |uniques, artist|
-      
+      if !uniques.include?(artist)
+        uniques << artist
+      end
+    end
   end
   
   def self.genres
