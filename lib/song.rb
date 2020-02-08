@@ -10,6 +10,8 @@ class Song
     return @@count
   end
   
+  
+  
   def self.artists
     unique_artists = []
     
@@ -22,6 +24,8 @@ class Song
     return unique_artists
   end
   
+  
+  
   def self.genres
     unique_genres = []
     
@@ -33,6 +37,8 @@ class Song
     
     return unique_genres
   end
+  
+  
   
   def self.genre_count
     genre_totals = {}
@@ -48,9 +54,23 @@ class Song
     return genre_totals
   end
   
+  
+  
   def self.artist_count
-    return @@artists.size
+    artist_totals = {}
+    
+    @@artists.each do |an_artist|
+      if artist_totals.has_key?(an_artist)
+        artist_totals[an_artist] += 1
+      else
+        artist_totals[an_artist] = 1
+      end
+    end
+    
+    return genre_totals
   end
+  
+  
   
   def initialize(name, artist, genre)
     @name = name
