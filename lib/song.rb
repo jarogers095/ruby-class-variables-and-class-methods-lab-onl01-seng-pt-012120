@@ -35,7 +35,10 @@ class Song
   end
   
   def self.genre_count
-    return @@genres.size
+    genre_totals = {}
+    
+    @@genres.reduce(genre_totals) do |hash, a_genre|
+      
   end
   
   def self.artist_count
