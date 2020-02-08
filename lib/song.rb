@@ -38,7 +38,7 @@ class Song
     genre_totals = {}
     
     @@genres.reduce(Hash.new(0)) do |the_hash, a_genre|
-      if the_hash.keys.include?(a_genre)
+      if the_hash.has_key?(a_genre)
         the_hash[a_genre] += 1
       else
         the_hash[a_genre] = 1
