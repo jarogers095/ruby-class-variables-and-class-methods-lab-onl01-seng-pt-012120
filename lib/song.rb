@@ -37,13 +37,15 @@ class Song
   def self.genre_count
     genre_totals = {}
     
-    @@genres.reduce(Hash.new) do |the_hash, a_genre|
-      if the_hash.has_key?(a_genre)
-        the_hash[a_genre] += 1
+    @@genres.each do |a_genre|
+      if genre_totals.has_key?(a_genre)
+        genre_totals[a_genre] += 1
       else
-        the_hash[a_genre] = 1
+        genre_totals[a_genre] = 1
       end
     end
+    
+    return genre_totals
   end
   
   def self.artist_count
