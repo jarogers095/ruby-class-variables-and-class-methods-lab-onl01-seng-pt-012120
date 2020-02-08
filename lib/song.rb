@@ -67,7 +67,7 @@ class Song
       end
     end
     
-    return genre_totals
+    return artist_totals
   end
   
   
