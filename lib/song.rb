@@ -15,7 +15,6 @@ class Song
       if !uniques.include?(artist)
         uniques << artist
       end
-      return uniques
     end
   end
   
