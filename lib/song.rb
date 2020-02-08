@@ -11,10 +11,11 @@ class Song
   end
   
   def self.artists
-    return @@artists.reduce do |uniques, artist|
+    return @@artists.reduce(Array.New) do |uniques, artist|
       if !uniques.include?(artist)
         uniques << artist
       end
+      return uniques
     end
   end
   
