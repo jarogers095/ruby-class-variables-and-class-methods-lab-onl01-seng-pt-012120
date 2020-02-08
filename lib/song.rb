@@ -11,7 +11,8 @@ class Song
   end
   
   def self.artists
-    return @@artists
+    return @@artists.inject do |uniques, artist|
+      
   end
   
   def self.genres
