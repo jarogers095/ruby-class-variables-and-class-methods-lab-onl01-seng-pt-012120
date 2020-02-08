@@ -11,7 +11,7 @@ class Song
   end
   
   def self.artists
-    return @@artists.inject do |uniques=[], artist|
+    return @@artists.inject do |uniques, artist|
       if !uniques.include?(artist)
         uniques << artist
       end
