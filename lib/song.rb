@@ -11,11 +11,14 @@ class Song
   end
   
   def self.artists
-    return @@artists.reduce([]) do |uniques, artist|
-      if !uniques.include?(artist)
-        uniques << artist
+    unique_artists = []
+    @@artists.each do |an_artist|
+      if !unique_artists.include?(an_artist)
+        unique_artists << artist
       end
     end
+    
+    return unique_artists
   end
   
   def self.genres
